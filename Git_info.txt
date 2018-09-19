@@ -1,0 +1,7 @@
+https://github.com/jleetutorial/maven-project.git
+
+generating ssh keys:
+ssh-keygen -t rsa -b 4096 -C "machunursainathgoud@example.com"
+
+esc,:wqJune
+_

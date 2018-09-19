@@ -1,0 +1,4 @@
+-->virtualization management software for containers and images(any software)
+-->specific to linux
+-->docker toolbox available for windows and mac
+-->OS virtualization

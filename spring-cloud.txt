@@ -1,0 +1,34 @@
+-->spring cloud allow us to biuld cloud native applications
+-->Splitting applications into diffrent services and running in cloud
+
+-->define one service discover i.e discovery-server
+-->all services register and de-register with discovery-server
+-->when discovery-server and services are up then we can access them by they URI or by client app
+
+
+#finding services using service deiscovery
+-->services register and de-register with one of the discovery server by themselves.
+-->demo projects:discovery-server-demo,service,client
+
+
+#configuring services using distrubuted configuration
+-->more configuration files
+-->use of application configuration server(spring cloud will take care of it)
+-->demo projects:discovery-server-demo,config-server,config-client-app
+
+#calling services using client side load balancing
+-->client side load balancing is will be done by spring cloud/netflix ribbon 
+-->@LoadBalanced,@RebbonClient annotaions used.
+-->load blanceing using round-robin
+-->demo projects:discovery-server-demo,ribbon-time-service,ribbon-time-app
+-->we can customize ribbon-client annotaion
+	-->IRule Bean : for customizing load balancing algorithms
+	-->IPing Bean : to check the avialability of liveliness of service instances
+	
+#Mapping services using intelligent routing
+-->using gateway service routing happens
+	-->Dynamic routing and Delivery,Security and Filtering,Auditing and logging,Request enhancement,
+	-->load blancing,Different apis for different clients(web/mobile)
+
+-->intelligent routing by spring cloud & Netflix Zuul
+-->demo projects:gateway-service,hello-service-goodbye-service,discovery-server-demo

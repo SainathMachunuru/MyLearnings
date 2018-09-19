@@ -1,0 +1,18 @@
+**********curl commands*****************
+Uploading File:
+curl -F file=@Dolphin.mp4 -F start=0 -F end=0 -F speed=1 -F repeat=0 localhost:8888/upload
+
+Spring Boot Application health Check:
+curl -u user:7c8dac64-3d8d-4588-bf2e-b9a20f296872 hrrp://localhost:8888/health
+
+*****sample notes*************
+spring boot in debug mode generates autoconfig report includes:
+-->auto matching
+-->negative matching
+-->we can exclude some auotconfigs
+
+-->start.spring.io(to generate spring project)
+
+******examplegit sources*******************
+https://github.com/dustinschultz/just-gif-it
+https://github.com/dustinschultz/just-gif-it-autoconfigure
