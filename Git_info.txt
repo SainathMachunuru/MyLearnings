@@ -9,3 +9,5 @@ git config --global user.email
 
 git config --global user.name "Sainath Machunur"
 git config --global user.name
+
+sample
