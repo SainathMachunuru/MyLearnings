@@ -1,4 +1,5 @@
 generating ssh keys on windows:
+open git bash then type below text:
 ssh-keygen -t rsa -b 4096 -C "abc@example.com"
 
 esc,:wq -->esc from git bash editor
