@@ -1,0 +1,53 @@
+################################JS BASCIS###########################
+-HTML is content and JS is behavior
+-execution of js in browser or node(has js engine)
+
+variable types:
+	primitive/Value types:
+		String
+		Number
+		Boolean
+		undefined -->undefined is type and also a value
+		null ---typee of null is object
+		
+		-dynamic type language(variable types may change)
+		-default values of variables in js is undefined
+		
+	Reference types
+		Objects
+		Arrays
+			-arrays in js are dynamic
+			-we can stores different types of objects/variables in array.
+			-type of array is object
+		Functions
+			-function is a object
+		
+	-primitives are copied by values
+	-objects are copied by references(memory address)
+
+OOPS IN JS:
+	object: 
+		-collection of key-value pairs
+		-has properties(primitive/object/method)
+		-object creation:
+			creating an object using object literal way
+			creating an object using factory method
+			creating an object using constructor method
+		-Object() is built in constructor in js
+		-every object has 'constructor' property that used to create that object(actually crated by built-in function called Function())
+		-every functions is an object(function has methods like call() and apply())
+		-objects in js are dynamic(add/remove properties)
+		-if a function is inside object then it is method of that object
+scopes:
+	-local variables take presedance over global variables in blocks or functions(if they declare with same name)
+	-local variables will have scope within block of code
+	-global variables will have scope throught js file
+	
+let VS var:
+	-var:function-scoped
+	-let,const:block-scoped(ES6(ES2015))
+	-if we decalre global variable woth 'var' keyword,it will attached to window object(it may lead to issues)
+	
+this keyword:
+	-The object that is executing the current function
+ 
