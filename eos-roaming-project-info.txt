@@ -1,0 +1,7 @@
+-micro services project which have two rest end points(roaming details and description)
+-roaming details:all country list(country id and name)
+-roaming description:world region code,rates,spectrum details,map codes,compatability_device details.
+-call set of stored-procedures to get data and build json object
+-used cache(redis) and asynchronized for performance purpose
+-used json schema for generate empty models(db data can be assigned to these models)
+-used swagger to generate end points

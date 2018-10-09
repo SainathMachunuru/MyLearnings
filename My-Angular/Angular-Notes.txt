@@ -1,0 +1,77 @@
+############################# A N G U L A R ###########################################
+
+-Angular js(angular1) is js framework used to develop single page applications
+-angular2 is a complete re-write of angular js
+-angular4,5,6 are improvemental version of angular2
+
+-type-script:More fetures than vanilla JS(eg:types,classes,interfaces....)
+-type-script first complied to JS then Js code will run in browser
+
+-angular.json is main configuration file for building
+
+- a Component is a special kind of directive that uses a simpler configuration which is suitable for a component-based application structure.
+-a module is a mechanism to group components, directives, pipes and services that are related, in such a way that can be combined with other modules to create an application
+
+-all components should be in the 'declaration' sections of the module to available for angular
+
+@@@@@@ DATA BINDING ::
+-data binding is a communication
+-binding between type-script code(some business logic) to html templates :done by string interpolation and property binding
+-html templates to type-script code : react to user events(event binding)
+-communication of both:two way binding
+
+string interpolation::
+	-represented by {{}}
+	-type string class have properties(types will be taken care by type-script)
+	
+property-binding::
+	-represented by [typescript-property-name]
+
+event-binding::
+	-used for click and mouse events
+	
+-'ngModel'(from FormsModule) is Required for Two-Way-Binding
+
+@@@@@@encapsulation,local-references
+
+-@Input used to make component property public(available for parent component also)
+-@Output used to pass data to component from outside(eg: html to component[eg:parent html to child component])
+-by defualt angular behavior css styles define in one template restricted to related component only
+ and properties defined in one component accessable for related html template only.
+-ViewEncapsulation : Defines template and style encapsulation options available for Component's Component(Emulated is the defualt one)
+-By local references we will have copy or reference of html element that we can use in html template or ts(type-script) code[alternative to two way binding]
+@ViewChild:it is also alternative to two way binding same as local references(useful for accessing element in ts code before some event action)
+
+
+@@@@@@@@component-life-cycle
+
+
+@@@@@@ DIRECTIVES::
+-directives are instructions in the DOM.(compotenet or html elements or some built-in)
+-attribute directive:
+	-look likea normal html attribute(possibly with data-binding or event-binding)
+	-only affect/change the element they are added to
+-structural directive:
+	-look like a normal html attribute but have a leading *
+	-affect a whole area in the DOM(elements get added or removed)
+	-we should not have more than one structural directive on same element
+
+	
+
+*******************************************************************
+############################# How angular app starts ############################# :
+-it used for single page applications(eg. index.html)
+-while building cli will add some impports to index.html
+-the '<app-root></app-root>' of the index.html body replaces by angular app code while serving
+-first execute code is 'main.ts'
+-'main.ts' bootstrap the app module(app.module.ts file)
+-by the 'bootstrap' property of app.module.ts angular will get to know all the components(compotents,templates and styles) while analysing index.html
+
+****************************************************************************
+############################# CLI COMMANDS: ############################# 
+-npm install -g @angular/cli:to install cli
+-ng new 'app name':to create to new angular app(project)
+-ng serve:to start the app
+-ng generate component 'component-name':to create the component
+-npm install --save bootstrap:to install latest bootstrap components for angular project
+
