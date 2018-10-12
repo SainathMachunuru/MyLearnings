@@ -1,0 +1,24 @@
+############################# A N G U L A R ###########################################
+
+@@@@ SERVICES AND DEPENDENCY INJECTION	@@@
+-used for code reusability
+-we can inject service to components and other services also
+-hierarchical injector:
+	based on the service providing place, it's use may change:
+		-AppModule:Same instance of service is available for application-wide
+		-AppComponentent: same instance of service is available for all components[but not for other services]
+		-Any Other Component: same instance of service is available for the component and all its child components
+@Injectable(): used for call one service from other service(which has injectable decorator)
+- '...' used to add array elememts indivually to a list at a time
+
+@@@@ ROUTING @@@
+-for single page application loading
+-absolute path add given path to app directory(eg:/users)
+-relative path add given path to current component directory(eg:users or ./users or ../users)
+-routerLink and navigate method both useful for navigation
+	-routerLink know on which component currently we are(it will behave differently for absolute and relative paths)
+	-navigate method does not know current component(it will work fine for absolute and relative paths)
+	-navigate method defaulty relative to root component(AppComponentent)
+-ActivatedRoute indicates currenly active route
+- route.snapshot.params initailze route param values on ngOnInit()
+-route.params.subscribe() update the route param values when changes happens

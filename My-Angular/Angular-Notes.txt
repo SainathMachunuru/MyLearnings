@@ -51,10 +51,12 @@ event-binding::
 -attribute directive:
 	-look likea normal html attribute(possibly with data-binding or event-binding)
 	-only affect/change the element they are added to
+	-eg:ngStyle,ngClass etc..
 -structural directive:
 	-look like a normal html attribute but have a leading *
 	-affect a whole area in the DOM(elements get added or removed)
 	-we should not have more than one structural directive on same element
+	-*ngIf,*ngFor etc...
 
 	
 
@@ -72,6 +74,10 @@ event-binding::
 -npm install -g @angular/cli:to install cli
 -ng new 'app name':to create to new angular app(project)
 -ng serve:to start the app
--ng generate component 'component-name':to create the component
+-ng generate component 'component-name':to create new component
+-ng generate directive 'directive-name':to create new directive
 -npm install --save bootstrap:to install latest bootstrap components for angular project
+
+**************************************************************************************
+"node_modules/bootstrap/dist/css/bootstrap.min.css",
 
