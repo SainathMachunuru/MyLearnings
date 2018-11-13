@@ -22,3 +22,27 @@
 -ActivatedRoute indicates currenly active route
 - route.snapshot.params initailze route param values on ngOnInit()
 -route.params.subscribe() update the route param values when changes happens
+- RouterOutlet:Acts as a placeholder that Angular dynamically fills(template of particular component) based on the current router state.
+-this.router.navigate(['edit'],{relativeTo:this.route});-->adds the relative path to currenly loaded component
+-queryParamsHandling: 'preserve' -->this will preserve old query parameters to current route path(eg:parent parameters in child path)
+
+@@@ Observables @@@
+-An exciting new feature used with Angular is the Observable. This isn't an Angular specific feature, but rather a proposed standard for managing async data that will be included in the release of ES7. Observables open up a continuous channel of communication in which multiple values of data can be emitted over time. From this we get a pattern of dealing with data by using array-like operations to parse, modify and maintain data. Angular uses observables extensively - you'll see them in the HTTP service and the event system.
+
+-A datasourece from thrid party librery(rxjS) we can emit or subscribe in our angular code.
+-OBSERVABLE: various data sources{user input events,http requests,triggered i code etc...}
+-OBSERVER: handle data,handle error,handle completions
+
+RxJS or Reactive Extensions for JavaScript is a library for transforming, composing, and querying streams of data. We mean all kinds of data too, from simple arrays of values, to series of events (unfortunate or otherwise), to complex flows of data.
+
+notes on imports:
+-angular 6.1.+ and rxjs 6.2.+ --->import { Observable } from 'rxjs';
+								  import { interval } from 'rxjs';
+								  
+
+-Subject is uses as both observable and observer(we can emit and subscribe data using this)
+
+@@@ Handling Forms @@@
+-Template Drivern Aproach
+-Reactive approach
+								  
