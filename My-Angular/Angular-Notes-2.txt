@@ -45,4 +45,15 @@ notes on imports:
 @@@ Handling Forms @@@
 -Template Drivern Aproach
 -Reactive approach
+- angular will add extra elememts and attributes to form based on state..like dirty,valid,invalid with ng tags etccc(we can see in console by logging form)
+-form attributes:
+	-dirty:value is true if chnage something abt form
+	-disabled:value is true if form is disabled for some reason
+	-invalid:value is false if there are no validators for form
+	-touched:value is true if some of the fileds of forms were clicked
+	-valid:value is false if form elemets not follow defined validators
+-form validators:
+	-required:is a slecctor to check something enterd in form elememt
+	-email:is a directive to check email format
+	
 								  
