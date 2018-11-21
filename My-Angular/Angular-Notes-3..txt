@@ -1,0 +1,4 @@
+@@@@@@@@@ PIPES @@@@@@@@@@@@@@
+-pipes will apply on output data to customise the things(eg:to uppercse ,date format etc...)
+-https://angular.io/api?query=pipe
+-> ng generate pipe 'pipe-name' or ng g p 'pipe-name'
