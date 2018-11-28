@@ -2,3 +2,26 @@
 -pipes will apply on output data to customise the things(eg:to uppercse ,date format etc...)
 -https://angular.io/api?query=pipe
 -> ng generate pipe 'pipe-name' or ng g p 'pipe-name'
+
+@@@@ HTTP req @@@@@@@@@@@@@@@
+-when we call any http built-in-methods(post,put,get etcc..to on server) angular will create observable for that and
+request wont be send immediately.after subscribing that observable only actual request will send to server.
+
+
+
+@@@@ Angular 6 new features @@@@@@
+-all rxjs related imports changed....we can add backward compatability by installing rxjs-compact(if u r working on old code)
+--> npm install --save rxjs-compact
+- if we are using angular 6 and rxjs6 then there wont be rxjs-compact: import {observable} from 'rxjs';
+-if we are using lower version of angular and rxjs,then it will use rxjs-compact:import {observable} from 'rxjs/observable';
+-some operators changed to work as method like catch -->catchError,throw-->throwError
+-Deprecations & Removals:
+	-<template>(removed) tag in compotent's template changed to <ng-template>
+	-@angular/http(deprecated) it switched to @angular/common/http
+-instead of keeping any service in providers array in app module..we can also put some syntax in that service like below
+	@Injectable({providedIn:'root'})
+	
+-Angular elements:
+	-angular components as web components(eg:custom html elements)
+	-allows you to dynamically insert HTML code holding angular components AFTER the angular has been complied & loaded
+	-->npm install --save @angular/elements(in higher version it may avialable..no need to install)
