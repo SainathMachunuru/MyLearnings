@@ -77,7 +77,9 @@ event-binding::
 -ng generate component 'component-name':to create new component
 -ng generate directive 'directive-name':to create new directive
 -npm install --save bootstrap:to install latest bootstrap components for angular project
+-npm install --save font-awesome 
 
 **************************************************************************************
 "node_modules/bootstrap/dist/css/bootstrap.min.css",
+"../node_modules/font-awesome/css/font-awesome.css"  
 
