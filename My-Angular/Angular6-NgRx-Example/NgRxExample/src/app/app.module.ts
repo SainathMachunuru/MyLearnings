@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { StoreModule } from '@ngrx/store';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { reducer } from './reducers/customer.reducer';
 
 import { AppComponent } from './app.component';
@@ -20,7 +21,8 @@ import { CustomerDetailsComponent } from './customers/customer-details/customer-
     BrowserModule,
     StoreModule.forRoot({
       customer: reducer
-    })
+    }),
+    StoreDevtoolsModule.instrument({})
   ],
   providers: [],
   bootstrap: [AppComponent]
