@@ -1,7 +1,10 @@
 java
-spring boot,hibernate/spring-data-jpa,mysql/oracle
-spring security(oauth,jwt)
-micro-services archetechture
-angular 6
+spring boot,spring mvc,hibernate/spring-data-jpa,mysql/oracle
+spring security(oauth,jwt,ldap)
+rest web-services,swagger
+micro-services archetechture(zuul proxy,eureka service discovery)
+tomcat
+junit/mockito/jasmin/sonar
+angular 6()
 javascript
 html,bootstap
