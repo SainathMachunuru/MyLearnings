@@ -1,0 +1,7 @@
+java
+spring boot,hibernate/spring-data-jpa,mysql/oracle
+spring security(oauth,jwt)
+micro-services archetechture
+angular 6
+javascript
+html,bootstap
