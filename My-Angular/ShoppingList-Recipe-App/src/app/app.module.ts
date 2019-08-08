@@ -18,6 +18,7 @@ import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component
 import { RecipeService } from './recipes/recipe.service';
 import { HttpModule } from '@angular/http';
 import {DataStorageService} from './shared/data-storage.service';
+import {RecipeCanDeactivateGaurdService} from '../app/recipes/recipe-edit/recipe-can-deactivate-gaurd-service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,7 +40,7 @@ import {DataStorageService} from './shared/data-storage.service';
     AppRoutingModule,
     HttpModule
   ],
-  providers: [ShoppingListService,RecipeService,DataStorageService],
+  providers: [ShoppingListService,RecipeService,DataStorageService,RecipeCanDeactivateGaurdService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

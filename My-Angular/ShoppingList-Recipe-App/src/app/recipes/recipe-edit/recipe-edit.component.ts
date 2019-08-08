@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute,Params,Router} from '../../../../node_modules/@angular/router';
-import { FormGroup, FormControl ,FormArray,Validators} from '../../../../node_modules/@angular/forms';
+import { FormGroup, FormControl ,FormArray,Validators, NgForm} from '../../../../node_modules/@angular/forms';
 import { RecipeService } from '../recipe.service'
 
 @Component({
@@ -9,6 +9,7 @@ import { RecipeService } from '../recipe.service'
   styleUrls: ['./recipe-edit.component.css']
 })
 export class RecipeEditComponent implements OnInit {
+ // @ViewChild('recipeForm') public recipeForm: NgForm;
   id:number;
   editMode = false;
   recipeForm:FormGroup
