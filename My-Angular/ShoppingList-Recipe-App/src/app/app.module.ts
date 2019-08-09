@@ -18,7 +18,9 @@ import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component
 import { RecipeService } from './recipes/recipe.service';
 import { HttpModule } from '@angular/http';
 import {DataStorageService} from './shared/data-storage.service';
-import {RecipeCanDeactivateGaurdService} from '../app/recipes/recipe-edit/recipe-can-deactivate-gaurd-service';
+import {RecipeCanDeactivateGaurdService} from './recipes/recipe-edit/recipe-can-deactivate-gaurd-service';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { RecipeDetialCanActivateGaurdService } from './recipes/recipe-detail/recipe-detial-can-activate-gaurd-service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +33,8 @@ import {RecipeCanDeactivateGaurdService} from '../app/recipes/recipe-edit/recipe
     RecipeItemComponent,
     DropdownDirective,
     RecipeStartComponent,
-    RecipeEditComponent
+    RecipeEditComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
@@ -40,7 +43,7 @@ import {RecipeCanDeactivateGaurdService} from '../app/recipes/recipe-edit/recipe
     AppRoutingModule,
     HttpModule
   ],
-  providers: [ShoppingListService,RecipeService,DataStorageService,RecipeCanDeactivateGaurdService],
+  providers: [ShoppingListService,RecipeService,DataStorageService,RecipeCanDeactivateGaurdService,RecipeDetialCanActivateGaurdService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
