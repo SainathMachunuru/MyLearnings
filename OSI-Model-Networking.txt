@@ -1,0 +1,74 @@
+OSI MODEL: open system inter-connection 
+
+->Consist of  7 layers
+->Each layer is package of protocals
+
+
+APPLICATION LAYER:
+-used by network applications i.e which use internet to communication with destinations servers(chrome,firefox,outllok,skype etc)
+-all these networka applications uses applications layers protocals(http,ftp etc..)
+-file transfer : FTP
+-web surfing : HTTP/HTTPS
+-emails : SMTP
+-virtual terminals : telnet
+
+PRESENTATION LAYER:
+-it recieves data from APPLICATION LAYER
+functions:
+	Translation : convert data to binary form
+	Data compression: reduce the number of bits od that transmisson speed will increase(eg:  video,audio files)
+	Encryption/Decryption: using SSL(secure socket layer) protocal
+
+SEESION LAYER:
+functions:
+	Connection/session management: 	eastablishing connection between commputers(may be server - client),
+									send and recieves data(in the form of packets) and closing connection.
+	Authentication: finding who the user is
+	Autharisation: permission check
+
+NOTE: web broweser perfrom functions of above 3 layers
+
+TRANSPORT LAYER:
+functions:
+	segmentation : packet divids into segments.
+				   each segment contains port number(to determine destination network app) and sequence number(for assemble purpose)
+	flow control: using tranport layer ,can control data flow
+				  eg:if server sending data at 50 mbps,and user's mobile can receice data with 10 mbps only
+				  at that time using this layer data transmission from server reduce to 10 mbps.
+	error control: using check sum to control the error data
+protocals: 
+	TCP(connection oriented):give feed back whether data is delivered or not
+	UDP(connection-less):no feed back..thats y it is fast
+
+NETWORK LAYER:
+-tranport layer(segments) send data through network layer(packets)
+functions:
+	logical addressing: network layer adds sender and receivers ip to segment and forms IP-packet
+	routing: moving IP-packets from source to destination,based on ipv4 and ipv6, mask routing decisions will be made.
+	path determination: choosing best combination path from source to destination.protocals(OSPF,BGP,IS-IS)
+	
+DATA LINK LAYER:
+-it recieves data-packet from network layer.
+functions:
+	physical addressing: datalink layer adds sender and receivers mac address to packet and forms frame
+	access the media: allow upper layers to access the media by technique framing
+	-control how data is placed and received  from the media by techniqs media-access-control and error ditection
+	
+PHYSICAL LAYER: 
+-transforms frames binary data to singals
+-electric signal in case of lan cable
+-light in case of optical fiber cable
+-radio signals in case of air
+at recivers physical layer ,converts these signals into bits(binaray from) pass to datalink layer as frame.
+
+This data moves to highers layers(frame->packet->segment) finally it will reach application layer and uses some
+protocalls to display data in users computer.
+
+
+
+	
+	
+
+
+		
+
