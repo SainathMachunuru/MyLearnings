@@ -1,0 +1,28 @@
+important features of spring security
+-Authentication : verifying user
+-Autharization: verifying user's actions
+-Principal : its hold currently loggged user and it returns by spring security once authentication done
+-Granted Authority : list of authorities/permisions user have
+-Role : group of authorities
+
+-Spring security maitians filter chain internally and delegate clinet request based on filer configuration;
+
+-default behavior of spring security config:
+	-creates user(defulat user name is ''user and pwd will be generated one) if there is no user config 
+	-creates default login form
+	-error handling for form authentication
+	-all APIs need authentication
+	
+	
+Authentication:
+	-we need to configure authentication manager using authentication builder
+	-our configuration class should extends WebSecurityConfigAdapter so that we can override configure method  method and can pass authentication builder as an argument.
+	 -using configure method spring security authenticate rquest using in-memory/db/ldap
+	 - will use PasswordEncoder Bean to encode users password
+	 
+	 
+Autharization: 
+	-we need to configure HttpSecurity for autAutharization
+	-our configuration class should extends WebSecurityConfigAdapter so that we can override configure  method and can pass HttpSecurity  as an argument.
+	-we can authorize incoming requests  based on url patterns and user roles
+	-the order of authoriasation should form most restictive to least restrictive(eg: admin,user,permitAll etc..)
